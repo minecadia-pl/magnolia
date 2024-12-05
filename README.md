@@ -1,0 +1,1 @@
+[minecadia-pl/magnolia](https://github.com/minecadia-pl/magnolia) © 2024 by [minecadia-pl/magnolia authors](https://github.com/minecadia-pl/magnolia/graphs/contributors) is licensed under [MIT](https://github.com/minecadia-pl/magnolia/blob/main/LICENSE)
