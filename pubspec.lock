@@ -342,6 +342,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.5.1"
+  postgrest:
+    dependency: "direct main"
+    description:
+      name: postgrest
+      sha256: "9f759ac497a24839addbed69d9569ea6d51d2e4834c672b8c2a73752fb6945c8"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.4.0"
   pub_semver:
     dependency: transitive
     description:
@@ -510,5 +518,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.1.2"
+  yet_another_json_isolate:
+    dependency: transitive
+    description:
+      name: yet_another_json_isolate
+      sha256: "56155e9e0002cc51ea7112857bbcdc714d4c35e176d43e4d3ee233009ff410c9"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.3"
 sdks:
   dart: ">=3.4.4 <4.0.0"

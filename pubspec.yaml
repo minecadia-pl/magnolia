@@ -1,5 +1,5 @@
 name: magnolia
-description: Account linking application
+description: Minecraft-Discord integration software
 version: 1.0.0
 repository: https://github.com/minecadia-pl/magnolia
 
@@ -10,6 +10,7 @@ dependencies:
   crypto: ^3.0.6
   http: ^1.2.2
   oauth2: ^2.0.3
+  postgrest: ^2.4.0
   shelf: ^1.4.2
   shelf_router: ^1.1.4
 
