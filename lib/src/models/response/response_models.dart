@@ -1,5 +1,4 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:magnolia/magnolia.dart';
 import 'package:shelf/shelf.dart';
 
 part 'response_models.g.dart';
@@ -30,11 +29,13 @@ final class ErrorResponseModel extends GenericResponseModel {
 final class SuccessResponseModel extends GenericResponseModel {
   SuccessResponseModel({required super.path, required super.method, super.message, super.data});
 
-  factory SuccessResponseModel.create(Request request, {String? message}) => SuccessResponseModel(
-      path: request.requestedUri.path,
-      method: request.method,
-      message: message
-  );
+  factory SuccessResponseModel.create(Request request, {String? message, Map<String, dynamic>? data}) =>
+      SuccessResponseModel(
+          path: request.requestedUri.path,
+          method: request.method,
+          message: message,
+          data: data
+      );
 
   Map<String, dynamic> toJson() => _$SuccessResponseModelToJson(this);
 }
