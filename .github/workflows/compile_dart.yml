@@ -1,0 +1,37 @@
+name: 🚀 Compile Dart Application
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  compile:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, windows-latest, macos-latest ]
+        sdk: [ stable ]
+
+    steps:
+      - name: 📥 Checkout Code
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Setup Dart SDK
+        uses: dart-lang/setup-dart@v1
+        with:
+          sdk: ${{ matrix.sdk }}
+
+      - name: 📦 Install Dependencies
+        run: dart pub get
+
+      - name: 📝 Generate Files
+        run: dart run build_runner build
+
+      - name: 🏗️ Compile Dart Application
+        run: dart compile exe bin/magnolia.dart -o bin/magnolia
+
+      - name: 📤 Upload Executable
+        uses: actions/upload-artifact@v4
+        with:
+          name: magnolia-${{ matrix.os }}
+          path: bin/magnolia
